@@ -1,13 +1,12 @@
 import os
 import sys
 import numpy as np
-import random
 from lib.Motion import *
 import matplotlib.pyplot as plt
 my_library = os.path.normpath(os.path.expanduser('~/.myconfigs/'))
 sys.path.append(my_library)
 part_dir = os.path.normpath(os.path.expanduser('~/git/particles/fig'))
-linux_dir = "/mnt/c/Users/merz.d/git/particles"
+linux_dir = os.path.normpath("/mnt/c/Users/merz.d/.myconfigs/")
 sys.path.append(linux_dir)
 
 # print(sys.path)
@@ -212,8 +211,8 @@ class Configuration:
                     #               1      2
                     # v12 = 2 - 1
                     # x1, v1
-                    pa[i].print_properties()
-                    pa[j].print_properties()
+                    # pa[i].print_properties()
+                    # pa[j].print_properties()
 
                     # v1 / v21
                     x1, y1 = vector_pos(pa[j], pa[i])
@@ -233,7 +232,7 @@ class Configuration:
                     # print_vector(pa[i].vx, pa[i].vy)
                     pa[i].vx = pa[i].vx - (dp1 / m1) * x1
                     pa[i].vy = pa[i].vy - (dp1 / m1) * y1
-                    print_vector(pa[i].vx, pa[i].vy)
+                    # print_vector(pa[i].vx, pa[i].vy)
 
                     # print("j:")
                     # print_vector(pa[j].vx, pa[j].vy)

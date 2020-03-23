@@ -14,12 +14,12 @@ from lib.Particles import *
 def main():
     print("Begin particles!")
 
-    num_particles = 15
+    num_particles = 25
     time_step = 0.005
     total_steps = 150000
     X = 0.0
     Y = 20.0
-    seed = 725861
+    seed = 1000654
     np.random.seed(seed)
     print("seed: ", seed)
 
@@ -77,7 +77,7 @@ def main():
         universe.check_for_red(particles)
 
         if step % 100 == 0:
-            print(step)
+            # print(step)
             universe.plot_particles(particles, seed, step)
 
 
